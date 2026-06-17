@@ -16,7 +16,6 @@ HEADERS = {
     "Accept": "text/css,*/*;q=0.1",
 }
 
-
 def fetch_css(url: str) -> str:
     request = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(request, timeout=30) as response:
@@ -91,7 +90,6 @@ def main():
     print("Parsing sprite rules...")
     sprites = get_positions(css)
     print(f"Parsed {len(sprites)} unit sprite entries.")
-    print(f"Wrote {OUT_PATH}")
 
     output_dir = Path(__file__).with_suffix("").parent / ".." / "output" / "units"
 
