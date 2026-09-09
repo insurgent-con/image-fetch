@@ -50,6 +50,11 @@ Do not commit:
 
 When investigating a parser change, keep a small local fixture rather than repeatedly downloading upstream resources where possible. Any fixture intended for the repository must be reviewed for both licensing and redistribution concerns.
 
+## Project Policies
+
+- [Legal, IP, and Permitted Use](LEGAL.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+
 ## License
 
 The repository code is licensed under [AGPL-3.0](LICENSE.txt). That license does not grant rights to third-party game assets downloaded by the scripts.
