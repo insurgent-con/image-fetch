@@ -1,5 +1,7 @@
 [Watch the project presentation](https://youtu.be/REPLACE_WITH_VIDEO_ID) — unlisted YouTube walkthrough and analysis.
 
+[View the slide deck](presentation.pptx)
+
 # Image Fetch
 
 > [!CAUTION]
