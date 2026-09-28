@@ -1,3 +1,5 @@
+[Watch the project presentation](https://youtu.be/REPLACE_WITH_VIDEO_ID) — unlisted YouTube walkthrough and analysis.
+
 # Image Fetch
 
 > [!CAUTION]
@@ -19,7 +21,11 @@ The parser depends on the structure and availability of live upstream CSS and im
 - Network access to the configured upstream resources
 - Permission to retrieve and process the relevant resources
 
-The standard library handles HTTP requests and filesystem operations; Pillow is used to open and crop sprite sheets.
+The standard library handles HTTP requests and filesystem operations; Pillow is used to open and crop sprite sheets. Install the dependency with:
+
+```sh
+python3 -m pip install -r requirements.txt
+```
 
 ## Usage
 
