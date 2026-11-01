@@ -30,7 +30,7 @@ python3 -m pip install -r requirements.txt
 From this repository:
 
 ```sh
-python3 parse_unit_sprites.py
+python3 init.py
 ```
 
 The script downloads the CSS and sprite sheets it is configured to use, discovers unit sprite positions, and writes generated images under the repository workspace's `output/units` directory. The generated directory is intentionally ignored by Git.
@@ -39,16 +39,16 @@ By default every discovered unit sprite is fetched. To fetch only specific asset
 
 ```sh
 # List the families that can be fetched, then exit
-python3 parse_unit_sprites.py --list
+python3 init.py --list
 
 # Fetch only the infantry and tank families
-python3 parse_unit_sprites.py infantry tank
+python3 init.py infantry tank
 
 # Fetch every family whose name contains "infantry"
-python3 parse_unit_sprites.py '*infantry*'
+python3 init.py '*infantry*'
 
 # Fetch only generations a and b of doctrine 1
-python3 parse_unit_sprites.py -g a b -d 1
+python3 init.py -g a b -d 1
 ```
 
 When filters are given, sprite sheets that are not needed for the selected assets are skipped rather than downloaded.
