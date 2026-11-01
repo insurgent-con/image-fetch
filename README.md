@@ -1,7 +1,3 @@
-[Watch the project presentation](https://youtu.be/xGSPUnTDyzo)
-
-[View the slide deck](presentation.pptx)
-
 # Image Fetch
 
 > [!CAUTION]
