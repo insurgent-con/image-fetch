@@ -77,17 +77,18 @@ def main() -> None:
     print("Fetching CSS...")
     css = fetch(BASE_CSS_URL).decode("utf-8")
 
-    if args.list:
-        list_families(positions(css))
-        return
-
     sprites = positions(css, Filter(
         families=frozenset(f.lower() for f in args.families),
         generations=frozenset(args.generations or ()),
         doctrines=frozenset(args.doctrines or ()),
     ))
+
+    list_families(sprites)
     if not sprites:
         print("No sprites matched the given filters.")
+
+    # Dry run won't write anything.
+    if args.list or not sprites:
         return
 
     needed = {e["doctrine"] for entries in sprites.values() for e in entries}
