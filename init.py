@@ -82,7 +82,7 @@ def main() -> None:
         return
 
     sprites = positions(css, Filter(
-        families=tuple(f.lower() for f in args.families),
+        families=frozenset(f.lower() for f in args.families),
         generations=frozenset(args.generations or ()),
         doctrines=frozenset(args.doctrines or ()),
     ))

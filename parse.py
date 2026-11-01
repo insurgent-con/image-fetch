@@ -17,7 +17,7 @@ _SPRITE_RE = re.compile(
 class Filter:
     """Selects sprite rules; empty fields accept everything."""
 
-    families: tuple[str, ...] = ()
+    families: frozenset[str] = frozenset()
     generations: frozenset[str] = frozenset()
     doctrines: frozenset[str] = frozenset()
 
