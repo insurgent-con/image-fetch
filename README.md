@@ -60,10 +60,6 @@ Fixtures mirror the rule format of the live stylesheet, and sprite sheets are ge
 ```sh
 python3 -m pytest
 ```
-## Project Policies
-
-- [Legal, IP, and Permitted Use](LEGAL.md)
-- [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## License
 
