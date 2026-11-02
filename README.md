@@ -1,3 +1,7 @@
+[Watch the project presentation](https://youtu.be/y9p76WTS-fc)
+
+[View the slide deck](presentation.pptx)
+
 # Image Fetch
 
 > [!CAUTION]
