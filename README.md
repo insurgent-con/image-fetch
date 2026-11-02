@@ -19,7 +19,7 @@ The parser depends on the structure and availability of live upstream CSS and im
 - Network access to the configured upstream resources
 - Permission to retrieve and process the relevant resources
 
-The standard library handles HTTP requests and filesystem operations; Pillow is used to open and crop sprite sheets. Install the dependency with:
+The standard library handles HTTP requests and filesystem operations; Pillow is used to open and crop sprite sheets, and pytest runs the test suite. Install the dependencies with:
 
 ```sh
 python3 -m pip install -r requirements.txt
@@ -53,25 +53,13 @@ python3 init.py -g a b -d 1
 
 When filters are given, sprite sheets that are not needed for the selected assets are skipped rather than downloaded.
 
-## Operational Notes
+## Testing
 
-- The source URL and request headers are currently defined by the script.
-- The script performs live downloads and may retrieve multiple sprite sheets.
-- The output is generated data and should not be committed by default.
-- There is currently no asset manifest, checksum inventory, or offline fixture suite.
-- Review source provenance and permitted use before copying any output into `api` or `client`.
+Fixtures mirror the rule format of the live stylesheet, and sprite sheets are generated in-memory, so no network access is required:
 
-## Safe Development Practices
-
-Do not commit:
-
-- Credentials or authenticated browser data.
-- Private or personal information.
-- Unreviewed game-derived assets.
-- Generated output that lacks provenance or permission.
-
-When investigating a parser change, keep a small local fixture rather than repeatedly downloading upstream resources where possible. Any fixture intended for the repository must be reviewed for both licensing and redistribution concerns.
-
+```sh
+python3 -m pytest
+```
 ## Project Policies
 
 - [Legal, IP, and Permitted Use](LEGAL.md)
