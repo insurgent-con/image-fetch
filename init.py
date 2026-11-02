@@ -35,6 +35,7 @@ def fetch(url: str) -> bytes:
 
 
 def parse_args() -> argparse.Namespace:
+  """Parse the command line arguments selecting which unit sprites to fetch."""
   parser = argparse.ArgumentParser(
     description="Fetch unit sprites from the Conflict of Nations client."
   )
@@ -61,6 +62,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def list_families(sprites: dict[str, list[dict]]) -> None:
+  """Print each family with its sprite count, generations, and doctrines."""
   for family in sorted(sprites):
     entries = sprites[family]
     generations = sorted({e["generation"] or "-" for e in entries})
@@ -72,6 +74,7 @@ def list_families(sprites: dict[str, list[dict]]) -> None:
 
 
 def main() -> None:
+  """Fetch, filter, download, and crop the requested unit sprites."""
   args = parse_args()
 
   print("Fetching CSS...")
