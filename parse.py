@@ -22,6 +22,7 @@ class Filter:
   doctrines: frozenset[str] = frozenset()
 
   def accepts(self, family: str, generation: str, doctrine: str) -> bool:
+    """Check whether a parsed rule passes every non-empty criterion."""
     return (
       (
         not self.families
